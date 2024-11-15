@@ -10,10 +10,10 @@ namespace String_Text__Exercise
         static void Main(string[] args)
         {
             // EnterNumSeparatedCommas(); // Exercise 1
-            //checkForDuplicateNumber(); Exercise 2
+            checkForDuplicateNumber(); //Exercise 2
             // timeCheck();  // Exercise3 
             //PascalCase(); // Exercise 4
-            PascalClass.PascalCase();
+            //PascalClass.PascalCase();
         }
 
         // Exercise3  check valid time  
@@ -78,20 +78,31 @@ namespace String_Text__Exercise
                 // compare the numbers in the list and check if there is any duplicate
                 //  compare the  consective numbers if they are equal display duplicate
 
+                var listOfUniqueNumbers = new List<int>();
                 if (list.Count <1)
                 {
                     return;
                 }
                 for (int i = 0; i < list.Count - 1; i++)
                 {
+                    var number = list[i];
+                    if (listOfUniqueNumbers.Contains(number))
+                    {
+                        Console.WriteLine("Duplicate number");
+                        return;
+                    }
+                    //else
+                    //{
+					//	listOfUniqueNumbers.Add(number);
+					//}
+					// is equivalent to
+					listOfUniqueNumbers.Add(number);
 
-                    if (list[i + 1] == list[i])
-                        Console.WriteLine(" duplicate number");
-                    else Console.WriteLine("Non duplicate");
-                }
-                
-            }
-            Console.WriteLine(" EXIT");  // figure out how to exit
+				}
+
+			}
+
+            Console.WriteLine("Non duplicate");
 
         }
 
