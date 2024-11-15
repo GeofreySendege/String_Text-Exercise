@@ -12,73 +12,9 @@ namespace String_Text__Exercise
             // EnterNumSeparatedCommas(); // Exercise 1
             //checkForDuplicateNumber(); Exercise 2
             // timeCheck();  // Exercise3 
-            PascalCase(); // Exercise 4
-
+            //PascalCase(); // Exercise 4
+            PascalClass.PascalCase();
         }
-
-
-        // Exercise4 
-        /*  Input  a few words and summarize in PascalCase  format 
-         *  Not yet working 
-         *  
-        */
-        public static void PascalCase() 
-        {
-            Console.WriteLine("Enter few separated words ");
-            var inPut = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(inPut))
-            {
-                Console.WriteLine("Invalid Input:");
-                return;
-            }
-            // otherwise split sentence into segments of words and save each segment at a string in an array 
-            // each index will hold a text and later join the segments together
-            //  how do i keep track of  the gaps between words 
-            // think of  spliting string with indexOf() method check examples 14 in lessons
-            /// 
-              var index1 = inPut.IndexOf(' ');
-              var firstword = inPut.Substring(0, index1);
-              var secondword   = inPut.Substring(index1 + 1);
-            Console.WriteLine("First word"+firstword);
-            Console.WriteLine("Second word"+secondword);
-
-            ///
-            var words = inPut.Split(' '); //  split words into segments and save them in an array 
-
-            var combinedWords = new List<string>();
-            var totalcharacters = 0;
-
-            // Figure out how to combine the words without cutting them out 
-            foreach (var word in words)
-            {
-                combinedWords.Add(word);
-                totalcharacters += word.Length + 1;
-                while (totalcharacters < combinedWords.Count)
-                {
-                    Console.WriteLine(string.Join("check Test: ", combinedWords));
-                }
-
-            }
-
-
-            // need to remove the space between Geofrey and Sendege
-            // Think alittle bit more how to combine the words without cutting them 
-
-            for (int i = 0; i < combinedWords.Count-1; i++) 
-            {
-                var joinedWord=combinedWords[i] + combinedWords[i + 1];
-                Console.WriteLine("Joined word2:"+joinedWord);
-            }
-            
-        }
-
-
-
-
-
-
-
-
 
         // Exercise3  check valid time  
         // trouble shoot why  iam only getting invalid time.( try to use  the debug mode ) 
@@ -122,8 +58,6 @@ namespace String_Text__Exercise
 
         }
 
-
-
         // Exercise 2: programe that prompts a user enter a few numbers , checks if any duplicate number , if yes output the duplicate
 
         public static void checkForDuplicateNumber()
@@ -160,24 +94,6 @@ namespace String_Text__Exercise
             Console.WriteLine(" EXIT");  // figure out how to exit
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // exercise 1 , separate string of numbers and con
         public static void EnterNumSeparatedCommas()
@@ -220,11 +136,10 @@ namespace String_Text__Exercise
             {
                 return;   // simple write return with nothing more automatically it will execute and return nothing if numbers less than2 
             }
-            for (int i = 0; i < listofNumbers.Count - 1; i++) //  making sure that total number of objects or size of list´does not exceed
+            for (int i = 1; i < listofNumbers.Count; i++) //  making sure that total number of objects or size of list´does not exceed
                                                               //  total number of indexes since always index start at 0  list[0]
-                                                              // 
             {
-                var difference = listofNumbers[i + 1] - listofNumbers[i]; // finding the difference between two indexes should be always 1
+                var difference = listofNumbers[i] - listofNumbers[i - 1]; // finding the difference between two indexes should be always 1
                 if (difference != 1)    //  dealing with scenario  if the difference is not equal to 1 , return not
                                         //  consecutive others always conesective nunmber
                 {
