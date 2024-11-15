@@ -72,14 +72,6 @@ namespace String_Text__Exercise
             
         }
 
-
-
-
-
-
-
-
-
         // Exercise3  check valid time  
         // trouble shoot why  iam only getting invalid time.( try to use  the debug mode ) 
 
@@ -121,8 +113,6 @@ namespace String_Text__Exercise
             }
 
         }
-
-
 
         // Exercise 2: programe that prompts a user enter a few numbers , checks if any duplicate number , if yes output the duplicate
 
@@ -220,8 +210,7 @@ namespace String_Text__Exercise
             {
                 return;   // simple write return with nothing more automatically it will execute and return nothing if numbers less than2 
             }
-            for (int i = 0; i < listofNumbers.Count - 1; i++) //  making sure that total number of objects or size of list´does not exceed
-                                                              //  total number of indexes since always index start at 0  list[0]
+            for (int i = 0; i < listofNumbers.Count - 1; i++) //  remember to change the comment
                                                               // 
             {
                 var difference = listofNumbers[i + 1] - listofNumbers[i]; // finding the difference between two indexes should be always 1
