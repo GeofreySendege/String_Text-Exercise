@@ -30,34 +30,30 @@ namespace String_Text__Exercise
 			var index1 = inPut.IndexOf(' ');
 			var firstword = inPut.Substring(0, index1);
 			var secondword = inPut.Substring(index1 + 1);
-			Console.WriteLine("First word" + firstword);
-			Console.WriteLine("Second word" + secondword);
+			Console.WriteLine("First word: " + firstword);
+			Console.WriteLine("Second word: " + secondword);
 
 			///
 			var words = inPut.Split(' '); //  split words into segments and save them in an array 
 
-			var combinedWords = new List<string>();
-			var totalcharacters = 0;
-
+			var outString = "";
 			// Figure out how to combine the words without cutting them out 
 			foreach (var word in words)
 			{
-				combinedWords.Add(word);
-				totalcharacters += word.Length + 1;
-				while (totalcharacters < combinedWords.Count)
-				{
-					Console.WriteLine(string.Join("check Test: ", combinedWords));
-				}
-
+				var upperCaseFirstLetter = word.Substring(0, 1).ToUpper();
+				var restOfString = word.Substring(1);
+				outString +=  upperCaseFirstLetter + restOfString;
 			}
+
+			Console.WriteLine(outString);
 			// need to remove the space between Geofrey and Sendege
 			// Think alittle bit more how to combine the words without cutting them 
 
-			for (int i = 0; i < combinedWords.Count - 1; i++)
-			{
-				var joinedWord = combinedWords[i] + combinedWords[i + 1];
-				Console.WriteLine("Joined word2:" + joinedWord);
-			}
+			//for (int i = 0; i < combinedWords.Count - 1; i++)
+			//{
+			//	var joinedWord = combinedWords[i] + combinedWords[i + 1];
+			//	Console.WriteLine("Joined word2:" + joinedWord);
+			//}
 		}
 	}
 }

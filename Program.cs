@@ -9,11 +9,11 @@ namespace String_Text__Exercise
     {
         static void Main(string[] args)
         {
-            // EnterNumSeparatedCommas(); // Exercise 1
-            checkForDuplicateNumber(); //Exercise 2
-            // timeCheck();  // Exercise3 
+            //EnterNumSeparatedCommas(); // Exercise 1
+            //checkForDuplicateNumber(); //Exercise 2
+            //timeCheck();  // Exercise3 
             //PascalCase(); // Exercise 4
-            //PascalClass.PascalCase();
+            PascalClass.PascalCase();
         }
 
         // Exercise3  check valid time  
@@ -28,7 +28,7 @@ namespace String_Text__Exercise
 
             if (string.IsNullOrWhiteSpace(currentTime))
             {
-                Console.WriteLine("Invalid Time:");
+                Console.WriteLine("Invalid Time 1:");
                 return;  // do nothing 
             }
             // else continue and split  input string into parts 
@@ -37,9 +37,10 @@ namespace String_Text__Exercise
             // segnments or parts should not  be more than two , check if user inputs more  ot longer string 
             if (segmentTime.Length != 2)  //   if there are more segments or parts of time scenario not allowed
             {
-                Console.WriteLine("Invalid Time:");
+                Console.WriteLine("Invalid Time 2:");
                 return;
             }
+            
 
             // otherwise break  and convert each segment saved in the array in to integers 
 
@@ -47,7 +48,7 @@ namespace String_Text__Exercise
             var min = int.Parse(segmentTime[1]);   // second  index is segment for minutes
 
             // find  and check for the  valid time range 
-            if ((hour >= 0 && hour <= 23) && (min >= 0 && min >= 59))
+            if ((hour >= 0 && hour <= 23) && (min >= 0 && min <= 59))
             {
                 Console.WriteLine("Valid time");
             }
