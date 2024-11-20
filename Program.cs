@@ -9,19 +9,25 @@ namespace String_Text__Exercise
     {
         static void Main(string[] args)
         {
+            
+            
+
             // EnterNumSeparatedCommas(); // Exercise 1
             //checkForDuplicateNumber(); Exercise 2
             // timeCheck();  // Exercise3 
-            PascalCase(); // Exercise 4
+            //PascalCase(); // Exercise 4
 
         }
-
-
+        
+        /// <summary>
+     
+        /// </summary>
         // Exercise4 
         /*  Input  a few words and summarize in PascalCase  format 
          *  Not yet working 
          *  
         */
+        /*
         public static void PascalCase() 
         {
             Console.WriteLine("Enter few separated words ");
@@ -151,8 +157,10 @@ namespace String_Text__Exercise
 
         }
 
-
-
+        
+        /// <summary>
+        /// 
+        /// </summary>
 
 
 
@@ -230,6 +238,7 @@ namespace String_Text__Exercise
             Console.WriteLine("Total size list:" + sizeOfList);
 
         }
+        */
     }
 
 
