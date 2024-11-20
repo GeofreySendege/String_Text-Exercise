@@ -9,7 +9,7 @@ public class CheckDuplicateEx2
 
     // Exercise 2: programe that prompts a user enter a few numbers ,
     // checks if any duplicate number , if yes output the duplicate
-    // Implementation needs to  be changed 
+    // Updated and made changes in CheckDuplicate   functionality
 
     public static void checkForDuplicateNumber()
     {
@@ -28,21 +28,27 @@ public class CheckDuplicateEx2
             }
             // compare the numbers in the list and check if there is any duplicate
             //  compare the  consective numbers if they are equal display duplicate
+            // Create a list of uniquenumbers 
 
+            var listOfUniqueNumbers= new List<int>();
             if (list.Count < 1)
             {
                 return;
             }
             for (int i = 0; i < list.Count - 1; i++)
             {
+                var number =list[i];
 
-                if (list[i + 1] == list[i])
-                    Console.WriteLine(" duplicate number");
-                else Console.WriteLine("Non duplicate");
+                if (listOfUniqueNumbers.Contains(number))
+                {
+                    Console.WriteLine("Duplicate Number:");
+                    return;
+                }
+                listOfUniqueNumbers.Add(number); // add the number to the list of  unique numbers 
             }
 
         }
-        Console.WriteLine(" EXIT");  // figure out how to exit
+        Console.WriteLine(" Non Duplicate"); 
 
     }
 
