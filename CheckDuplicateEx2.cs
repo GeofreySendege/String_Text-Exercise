@@ -13,10 +13,11 @@ public class CheckDuplicateEx2
 
     public static void checkForDuplicateNumber()
     {
+        Console.WriteLine("Next:Program checks for duplicate numbers");
         string[] elements;
         var list = new List<int>();
 
-        Console.WriteLine("Please enter a few numbers separated by '-' sign:");
+        Console.WriteLine("Please enter a few numbers separated by:'-'");
         var inputStr = Console.ReadLine();
         if ((!string.IsNullOrEmpty(inputStr)))
         {
@@ -46,7 +47,6 @@ public class CheckDuplicateEx2
                 }
                 listOfUniqueNumbers.Add(number); // add the number to the list of  unique numbers 
             }
-
         }
         Console.WriteLine(" Non Duplicate"); 
 

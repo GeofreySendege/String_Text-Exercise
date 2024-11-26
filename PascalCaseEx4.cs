@@ -9,6 +9,8 @@ public class PascalCaseEx4
      
     public static void PascalCase()
     {
+        Console.WriteLine("Next: Program that Combines Words Together:");
+
         Console.WriteLine("Enter few separated words ");
         var inPut = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(inPut))
@@ -40,21 +42,17 @@ public class PascalCaseEx4
             totalcharacters += word.Length + 1;
             while (totalcharacters < combinedWords.Count)
             {
-                Console.WriteLine(string.Join("check Test: ", combinedWords));
+                Console.WriteLine(string.Join("Check  available words: ", combinedWords));
             }
 
         }
-
-
-        // need to remove the space between Geofrey and Sendege
-        // Think alittle bit more how to combine the words without cutting them 
-
+        // Combining the words 
         for (int i = 0; i < combinedWords.Count - 1; i++)
         {
             var joinedWord = combinedWords[i] + combinedWords[i + 1];
             Console.WriteLine("Joined word2:" + joinedWord);
         }
-
+        //Console.WriteLine(" Combination functionality does not seem work well, need to check it out ");
     }
 
 }

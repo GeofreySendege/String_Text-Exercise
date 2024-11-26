@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CheckDuplicateEx2.cs = CheckDuplicateEx2.cs
 		CheckValidTime.cs = CheckValidTime.cs
 		ConsecutiveNumEx1.cs = ConsecutiveNumEx1.cs
+		CountVowels.cs = CountVowels.cs
 		PascalCaseEx4.cs = PascalCaseEx4.cs
 	EndProjectSection
 EndProject
