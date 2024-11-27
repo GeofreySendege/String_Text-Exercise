@@ -11,7 +11,6 @@ public class CountVowels
     //Count the number of vowels (a, e, o, u, i) in the word. 
      So, if the user enters "inadequate", the program should display 6 on the console.
     */
-
     public static void CountVowelsInWord()
     {
         Console.WriteLine("Next:Program counts the number of vowels in a word");
@@ -22,8 +21,7 @@ public class CountVowels
             Console.WriteLine("Invalid Input");
             return;
         }
-        // create a list of vowels  and initialize it with vowels
-        var vowels = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' });
+        var vowels = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' }); //// create a list of vowels  and initialize it with vowels
         // its always good to deal with the limitations at  the begining 
         if (input.Length < 2)  // if the word is less than 2 characters 
         {
@@ -31,7 +29,6 @@ public class CountVowels
             return;
         }
         var vowel = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' });  // declared and initialized a list of vowels
-
         var elements = input.Split(' '); // split the string and save it to an array of strings
         var vowelCount = 0;
         foreach (var items in elements)   // iterate through array and convert each element to integers and save it in a list
@@ -44,12 +41,8 @@ public class CountVowels
                 {
                     vowelCount++;
                 }
-
             }
-
         }
         Console.WriteLine("Total number of vowels is:" + vowelCount);
-
-
     }
 }
