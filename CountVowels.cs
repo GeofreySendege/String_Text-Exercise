@@ -21,28 +21,29 @@ public class CountVowels
             Console.WriteLine("Invalid Input");
             return;
         }
-        var vowels = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' }); //// create a list of vowels  and initialize it with vowels
-        // its always good to deal with the limitations at  the begining 
-        if (input.Length < 2)  // if the word is less than 2 characters 
+        var vowel = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' });  // declared and initialized a list of vowels
+        var elements = input.Split(' '); // split the string and save it to an array of strings'
+        if (elements.Length != 1)
         {
-            Console.WriteLine("Sorry Word is inadequate: 6");
+            Console.WriteLine("Input should be one word.");
             return;
         }
-        var vowel = new List<char>(new char[] { 'a', 'e', 'i', 'o', 'u' });  // declared and initialized a list of vowels
-        var elements = input.Split(' '); // split the string and save it to an array of strings
         var vowelCount = 0;
-        foreach (var items in elements)   // iterate through array and convert each element to integers and save it in a list
-        {
-            var character1 = items.ToCharArray(); // convert each string in to characters & save characters in an array
 
-            foreach (var character in character1)// iterate through character[] array and check if character is found in the list of vowel1
+        for (var i = 0; i < input.Length; i++) 
+        {
+            if (vowel.Contains(input[i]))
+                vowelCount++;
+        }
+        foreach (var character in input)// iterate through character[] array and check if character is found in the list of vowel1
+        {
+            if (vowel.Contains(character))
             {
-                if (vowel.Contains(character))
-                {
-                    vowelCount++;
-                }
+                vowelCount++;
             }
         }
+
+        Console.WriteLine(input[1]);
         Console.WriteLine("Total number of vowels is:" + vowelCount);
     }
 }

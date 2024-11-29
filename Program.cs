@@ -10,11 +10,11 @@ namespace String_Text__Exercise
         static void Main(string[] args)
         {
 
-           // ConsecutiveNumEx1.EnterNumSeparatedCommas(); // Ex1
-           // CheckDuplicateEx2.checkForDuplicateNumber();  // Ex2 
-           // CheckValidTime.timeCheck(); // Ex3
-            PascalCaseEx4.PascalCase1();// Ex4
-            //CountVowels.CountVowelsInWord(); // Ex5
+            // ConsecutiveNumEx1.EnterNumSeparatedCommas(); // Ex1
+            // CheckDuplicateEx2.checkForDuplicateNumber();  // Ex2 
+            // CheckValidTime.timeCheck(); // Ex3
+            //PascalCaseEx4.PascalCase1();// Ex4
+            CountVowels.CountVowelsInWord(); // Ex5
         }
     }
 }
